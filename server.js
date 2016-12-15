@@ -20,4 +20,7 @@ server.use(bodyParser.urlencoded({ extended: true }))
 // Routes
 
 server.get('/', index.get)
-
+server.get('/form', index.newUser)
+server.post('/form', index.addUser)
+server.get('/editform/:id', index.showEditForm)
+server.post('/editform/:id', index.editUser)
